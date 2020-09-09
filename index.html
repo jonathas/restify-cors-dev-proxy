@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const url = 'http://localhost:3000/proxy?url=';
+        const hockeyTechUrl = encodeURIComponent('http://cluster.leaguestat.com/feed/index.php?feed=gc&key=4767a11864244441&client_code=ohl&game_id=23814&lang_code=en&fmt=json&tab=gamesummary');
+        
+        const load = async () => {
+            const res = await fetch(`${url}${hockeyTechUrl}`);
+            const content = await res.json();
+            return content;
+        };
+
+        load().then(data => console.log(data));
+    </script>
+</body>
+</html>

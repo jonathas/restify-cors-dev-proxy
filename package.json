@@ -1,0 +1,39 @@
+{
+  "name": "restify-cors-dev-proxy",
+  "version": "1.0.0",
+  "description": "A proxy to solve CORS issues in development",
+  "main": "index.js",
+  "scripts": {
+    "prestart": "npm install",
+    "lint": "eslint .",
+    "release": "release-it"
+  },
+  "author": "Jonathas Ribeiro <contact@jonathas.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jonathas/restify-cors-dev-proxy.git"
+  },
+  "dependencies": {
+    "axios": "^0.20.0",
+    "restify": "^8.5.1",
+    "restify-cors-middleware": "^1.1.1",
+    "restify-errors": "^8.0.2"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^9.1.2",
+    "@commitlint/config-conventional": "^9.1.2",
+    "auto-changelog": "^2.2.0",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.8.1",
+    "eslint-plugin-security": "^1.4.0",
+    "husky": "^4.3.0",
+    "release-it": "^14.0.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  }
+}
