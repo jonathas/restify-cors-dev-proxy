@@ -31,6 +31,6 @@ server.use(plugins.queryParser());
 
 server.get('/proxy', respond);
 
-server.listen(3000, function () {
+server.listen(3001, function () {
     console.log('%s listening at %s', server.name, server.url);
 });

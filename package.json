@@ -4,7 +4,8 @@
   "description": "A proxy to solve CORS issues in development",
   "main": "index.js",
   "scripts": {
-    "prestart": "npm install",
+    "prestart": "npm install --only=prod",
+    "start": "node index.js",
     "lint": "eslint .",
     "release": "release-it"
   },
@@ -22,7 +23,7 @@
   },
   "devDependencies": {
     "@commitlint/cli": "^9.1.2",
-    "@commitlint/config-conventional": "^9.1.2",
+    "@commitlint/config-conventional": "^11.0.0",
     "auto-changelog": "^2.2.0",
     "babel-eslint": "^10.1.0",
     "eslint": "^7.8.1",
